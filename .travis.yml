@@ -37,7 +37,7 @@ script:
     || (echo 'Idempotence test: fail' && exit 1)
 
   # Ensure PHP PostgreSQL support is enabled.
-  - docker exec --tty "$(cat ${container_id})" env TERM=xterm php -i | grep 'postgres => enabled'
+  - docker exec --tty "$(cat ${container_id})" env TERM=xterm php -i | grep 'PostgreSQL Support => enabled'
 
 after_failure:
   - docker exec --tty "$(cat ${container_id})" env TERM=xterm php -i
