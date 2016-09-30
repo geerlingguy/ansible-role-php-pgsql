@@ -19,7 +19,7 @@ Available variables are listed below, along with default values (see `defaults/m
     php_pgsql_package: php-pgsql # RedHat
     php_pgsql_package: php7.0-pgsql # Debian
 
-The PHP MySQL package to install via apt/yum. This should only be overridden if you need to install a unique/special package for MySQL support, as in the case of using software collections on Enterprise Linux.
+The PHP PostgreSQL package to install via apt/yum. This should only be overridden if you need to install a unique/special package for PostgreSQL support, as in the case of using software collections on Enterprise Linux.
 
 ## Dependencies
 
