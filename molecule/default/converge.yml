@@ -1,0 +1,31 @@
+---
+- name: Converge
+  hosts: all
+  become: true
+
+  vars:
+    php_enablerepo: "remi,remi-php72"
+    php_default_version_debian: "7.2"
+
+  pre_tasks:
+    - name: Update apt cache.
+      apt: update_cache=true cache_valid_time=600
+      when: ansible_os_family == 'Debian'
+
+    - name: Set package name correctly for Debian.
+      set_fact:
+        php_pgsql_package: php{{ php_default_version_debian }}-pgsql
+      when: ansible_os_family == 'Debian'
+
+  roles:
+    - role: geerlingguy.repo-remi
+      when: ansible_os_family == 'RedHat'
+    - role: geerlingguy.apache
+    - role: geerlingguy.postgresql
+    - role: geerlingguy.php
+    - role: geerlingguy.php-pgsql
+
+  post_tasks:
+    - name: Make sure PHP pgsql driver is enabled.
+      command: "php -i | grep 'PostgreSQL Support => enabled'"
+      changed_when: false
