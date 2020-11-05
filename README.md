@@ -1,6 +1,6 @@
 # Ansible Role: PHP-PostgreSQL
 
-[![Build Status](https://travis-ci.com/geerlingguy/ansible-role-php-pgsql.svg?branch=master)](https://travis-ci.com/geerlingguy/ansible-role-php-pgsql)
+[![CI](https://github.com/geerlingguy/ansible-role-php-pgsql/workflows/CI/badge.svg?event=push)](https://github.com/geerlingguy/ansible-role-php-pgsql/actions?query=workflow%3ACI)
 
 Installs PHP [PostgreSQL](https://www.postgresql.org/) support on Linux.
 
