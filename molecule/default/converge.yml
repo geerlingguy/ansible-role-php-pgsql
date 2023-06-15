@@ -5,16 +5,10 @@
 
   vars:
     php_enablerepo: "remi,remi-php82"
-    php_default_version_debian: "7.2"
 
   pre_tasks:
     - name: Update apt cache.
       apt: update_cache=true cache_valid_time=600
-      when: ansible_os_family == 'Debian'
-
-    - name: Set package name correctly for Debian.
-      set_fact:
-        php_pgsql_package: php{{ php_default_version_debian }}-pgsql
       when: ansible_os_family == 'Debian'
 
   roles:
