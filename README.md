@@ -17,7 +17,7 @@ Available variables are listed below, along with default values (see `defaults/m
 (RedHat/CentOS only) If you have enabled any additional repositories (might I suggest geerlingguy.repo-epel or geerlingguy.repo-remi), those repositories can be listed under this variable (e.g. `remi,epel`). This can allow you to install later versions of PHP packages.
 
     php_pgsql_package: php-pgsql # RedHat
-    php_pgsql_package: php7.4-pgsql # Debian
+    php_pgsql_package: php8.1-pgsql # Debian
 
 The PHP PostgreSQL package to install via apt/yum. This should only be overridden if you need to install a unique/special package for PostgreSQL support, as in the case of using software collections on Enterprise Linux.
 
