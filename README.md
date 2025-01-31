@@ -1,6 +1,6 @@
 # Ansible Role: PHP-PostgreSQL
 
-[![CI](https://github.com/geerlingguy/ansible-role-php-pgsql/workflows/CI/badge.svg?event=push)](https://github.com/geerlingguy/ansible-role-php-pgsql/actions?query=workflow%3ACI)
+[![CI](https://github.com/geerlingguy/ansible-role-php-pgsql/actions/workflows/ci.yml/badge.svg)](https://github.com/geerlingguy/ansible-role-php-pgsql/actions/workflows/ci.yml)
 
 Installs PHP [PostgreSQL](https://www.postgresql.org/) support on Linux.
 
