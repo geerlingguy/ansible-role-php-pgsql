@@ -1,2 +1,2 @@
 ---
-__php_pgsql_package: php8.1-pgsql
+__php_pgsql_package: php8.3-pgsql
